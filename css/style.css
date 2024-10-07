@@ -1,0 +1,1198 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  --main-color: #ff512f;
+  --dark-color: #222222;
+  --light-color: #ffffff;
+  --default-transition: all 0.5s;
+}
+p {
+  font-family: Lora-Regular;
+  font-size: 18px;
+}
+h2 {
+  font-family: Lora-Bold;
+  font-size: 52px;
+  color: var(--dark-color);
+}
+@font-face {
+  font-family: Lora-Regular;
+  src: url(../fonts/Lora-Regular.ttf);
+}
+@font-face {
+  font-family: Lora-Italic;
+  src: url(../fonts/Lora-Italic.ttf);
+}
+@font-face {
+  font-family: Lora-SemiBold;
+  src: url(../fonts/Lora-SemiBold.ttf);
+}
+@font-face {
+  font-family: Lora-Bold;
+  src: url(../fonts/Lora-Bold.ttf);
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+}
+/* LOGO */
+nav > a img {
+  width: 180px;
+}
+/* MENU */
+nav > ul {
+  width: 670px;
+  display: flex;
+  justify-content: space-between;
+  font-family: Lora-Regular;
+  font-size: 18px;
+  position: relative;
+  color: var(--dark-color);
+}
+nav ul a {
+  color: var(--dark-color);
+}
+.fa-angle-down {
+  font-size: 12px;
+  padding-left: 3px;
+}
+nav ul li span {
+  background-color: var(--main-color);
+  padding: 3px 5px;
+  font-size: 14px;
+  color: var(--light-color);
+  border-radius: 2px;
+}
+nav ul li ul {
+  position: absolute;
+  top: 100%;
+  margin-top: 20px;
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+  box-shadow: 0px -1px 10px 0px rgba(106, 106, 106, 0.215);
+  background-color: var(--light-color);
+}
+nav ul li ul p {
+  font-family: Lora-Bold;
+  font-size: 20px;
+}
+nav > ul > li a:hover,
+nav > ul > li :hover .fa-angle-down {
+  color: var(--main-color);
+}
+.horizontal-submenu {
+  display: flex;
+  text-align: center;
+  width: 90%;
+  left: -10%;
+}
+.horizontal-submenu li {
+  width: 90%;
+  border-right: 1px solid #eeeeee;
+  padding: 30px 0;
+}
+.horizontal-submenu li:last-child,
+.horizontal-submenu-1 li:last-child {
+  border-right: none;
+}
+.horizontal-submenu p {
+  text-align: left;
+  padding: 20px 0 20px 30px;
+}
+.horizontal-submenu img {
+  width: 80%;
+  transition: var(--default-transition);
+}
+.horizontal-submenu li img:hover,
+.horizontal-submenu-1 li img:hover {
+  transform: scale(1.1);
+}
+.vertical-submenu {
+  width: 45%;
+  left: 20%;
+  padding: 20px 0 0 20px;
+}
+.vertical-submenu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding-bottom: 20px;
+}
+.vertical-submenu img {
+  width: 70px;
+  border-radius: 50%;
+}
+.vertical-submenu a {
+  font-family: Lora-SemiBold;
+}
+.horizontal-submenu-1 {
+  display: flex;
+  width: 950px;
+  left: -32%;
+}
+.horizontal-submenu-1 > li {
+  width: 100%;
+  border-right: 1px solid #eeeeee;
+  padding: 30px 0 50px 30px;
+}
+nav > ul > li:hover .horizontal-submenu,
+nav > ul > li:hover .vertical-submenu,
+nav > ul > li:hover .horizontal-submenu-1 {
+  opacity: 1;
+  visibility: visible;
+}
+.horizontal-submenu-1 .subtext-submenu {
+  font-family: Lora-Regular;
+  font-size: 16px;
+  padding-bottom: 30px;
+}
+.horizontal-submenu-1 img {
+  width: 90%;
+  padding: 20px 0;
+  transition: var(--default-transition);
+}
+.horizontal-submenu-1 a {
+  font-family: Lora-Bold;
+  font-size: 14px;
+  padding: 15px 25px;
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+}
+.horizontal-submenu-1 a:hover {
+  color: var(--light-color);
+  background-color: var(--main-color);
+  border: none;
+}
+nav > ul > li:first-child a,
+nav > ul > li:first-child i {
+  color: var(--main-color);
+}
+/* HAMBURGER */
+.hamburger {
+  font-size: 30px;
+  display: none;
+}
+/* button */
+.btn {
+  padding: 18px 50px;
+  color: var(--light-color);
+  background-color: var(--main-color);
+  font-size: 18px;
+  font-family: Lora-Bold;
+}
+.btn i {
+  padding-right: 10px;
+}
+.btn:hover {
+  background-color: var(--dark-color);
+}
+/* HEADER */
+.header {
+  width: 100%;
+  height: 670px;
+  display: flex;
+  color: var(--light-color);
+}
+.hero-details {
+  width: 50%;
+  background-color: #0f1317;
+  background-image: url(../images/hero-bg.png);
+  padding: 70px 0 0px 100px;
+}
+.slogan-icon {
+  width: 30px;
+}
+.slogan {
+  font-size: 20px;
+  font-family: Lora-Italic;
+  padding-left: 10px;
+}
+.hero-details h1 {
+  width: 95%;
+  font-family: Lora-Bold;
+  font-size: 60px;
+  line-height: 75px;
+  padding: 30px 0 40px 0;
+}
+.subtext {
+  font-size: 26px;
+  line-height: 39px;
+  padding-bottom: 40px;
+}
+.contact {
+  display: flex;
+}
+.contact .fa-phone-volume {
+  width: 65px;
+  height: 65px;
+  font-size: 25px;
+  background-color: var(--main-color);
+  text-align: center;
+  line-height: 65px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.contact-info {
+  font-family: Lora-Bold;
+  font-size: 24px;
+  padding-top: 10px;
+}
+.hero-image {
+  width: 50%;
+  background-image: url(../images/catering-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+}
+/* MAIN */
+/* COMPETITIVE-ADVANTAGES */
+.competitive-advantages ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 100px 0;
+}
+.competitive-advantages ul li {
+  width: 30%;
+}
+.competitive-advantages ul li .advantage-icon {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.competitive-advantages .animated-icon {
+  width: 70px;
+  transition: transform 0.5s ease;
+}
+.competitive-advantages ul li .advantage-icon:hover {
+  background-color: black;
+}
+.competitive-advantages ul li .advantage-icon:hover .animated-icon {
+  animation: HoverAnimation 1s forwards;
+}
+@keyframes HoverAnimation {
+  0% {
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.competitive-advantages ul li .icon-flames {
+  width: 30px;
+  margin-top: 20px;
+}
+.competitive-advantages ul li .subheading {
+  font-family: Lora-Bold;
+  font-size: 24px;
+  padding: 20px 0;
+}
+.competitive-advantages ul li .text {
+  line-height: 34px;
+  padding-bottom: 50px;
+}
+.buttons {
+  color: var(--dark-color);
+  font-family: Lora-Bold;
+  font-size: 18px;
+  margin-top: 30px;
+  padding: 20px 30px;
+  border: 1px solid var(--dark-color);
+}
+.buttons:hover {
+  border-color: var(--main-color);
+}
+/* CHEF-MESSAGE */
+.chef-message {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+}
+.chef-message figure img {
+  width: 95%;
+}
+.chef-message section {
+  width: 60%;
+}
+.chef-message section h2 {
+  padding: 30px 0;
+}
+.chef-message section p {
+  line-height: 34px;
+  padding-bottom: 20px;
+}
+.chef-message .fa-circle-check {
+  color: var(--main-color);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.chef-message section .check-mark {
+  font-family: Lora-Regular;
+  font-size: 18px;
+}
+.chef-message section figure {
+  margin-top: 20px;
+}
+.chef-message section figure img {
+  width: 150px;
+}
+.chef-message section .text-signature {
+  font-size: 16px;
+}
+/* CATERING SERVICES */
+.services {
+  background-color: #0f1317;
+  text-align: center;
+  padding: 100px 30px;
+}
+.services .slogan {
+  color: #f4f4f4;
+}
+.services h2 {
+  padding: 30px 0 60px 0;
+  color: var(--light-color);
+}
+.services .services-4-types {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.types-details {
+  width: 23%;
+  color: var(--light-color);
+}
+.types-details figure {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--default-transition);
+}
+.types-details figure::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  background-color: var(--main-color);
+  transition: var(--default-transition);
+  opacity: 0;
+}
+.types-details figure i {
+  width: 40px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 50%;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  z-index: 50;
+  transition: var(--default-transition);
+  opacity: 0;
+}
+.types-details figure .fa-link {
+  left: 37%;
+}
+.types-details figure .fa-magnifying-glass {
+  left: 55%;
+}
+.types-details figure:hover::after {
+  bottom: 0;
+  opacity: 0.6;
+}
+.types-details figure:hover .fa-link,
+.types-details figure:hover .fa-magnifying-glass {
+  opacity: 0.9;
+}
+.types-details figure img {
+  width: 100%;
+  display: block;
+}
+.types-details h4 {
+  font-size: 30px;
+  font-family: Lora-Bold;
+  color: var(--light-color);
+  padding: 20px 0 10px 0;
+}
+.types-details p {
+  font-size: 16px;
+  color: #999999;
+  padding-bottom: 10px;
+}
+.types-details .waves {
+  width: 80px;
+}
+.types-details .price {
+  color: var(--light-color);
+  font-size: 20px;
+  padding: 20px 0 60px;
+}
+.types-details a {
+  font-size: 18px;
+  color: var(--light-color);
+  font-family: Lora-Bold;
+  padding: 20px 30px;
+  border: 1px solid var(--light-color);
+}
+.types-details a:hover {
+  border-color: var(--main-color);
+}
+/* ABOUT MENU */
+.about-menu {
+  width: 100%;
+  height: 250px;
+  background-color: var(--main-color);
+  background-image: url(../images/hero-bg.png);
+}
+.about-menu .view-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+}
+.about-menu ul {
+  display: flex;
+  align-items: center;
+  color: var(--light-color);
+}
+.about-menu ul img {
+  width: 95px;
+  height: 110px;
+  margin-right: 50px;
+}
+.view-menu a {
+  padding: 30px 70px;
+  background-color: var(--light-color);
+  font-family: Lora-Bold;
+  color: var(--dark-color);
+  font-size: 22px;
+  display: block;
+}
+.about-menu .view-menu a:hover {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+.view-menu .display-text {
+  font-family: Lora-Bold;
+  font-size: 36px;
+  padding-bottom: 15px;
+}
+/* WHY AVADA CATERER? */
+.why-us {
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 0;
+}
+.why-us section {
+  width: 40%;
+}
+.why-us figure {
+  width: 48%;
+  position: relative;
+}
+.why-us figure img {
+  width: 100%;
+}
+.why-us ul {
+  display: flex;
+  padding-top: 50px;
+}
+.why-us h2 {
+  padding: 20px 0 30px 0;
+}
+.why-us p {
+  line-height: 34px;
+}
+.why-us ul img {
+  width: 70px;
+  margin-right: 20px;
+}
+.why-us ul .subheading {
+  font-size: 24px;
+  font-family: Lora-Bold;
+  padding-bottom: 20px;
+}
+.why-us ul img:hover {
+  color: black;
+}
+.why-us figure .image-description {
+  background-color: var(--light-color);
+  text-align: center;
+  padding: 50px 60px;
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.why-us figure .image-description img {
+  width: 70px;
+  margin: 10px;
+}
+.image-description p {
+  font-size: 24px;
+  line-height: 46px;
+}
+.why-us figure .image-description .span-style {
+  font-size: 80px;
+  color: var(--main-color);
+  font-family: Lora-Bold;
+}
+/* COUNTER */
+.counter {
+  padding: 70px;
+}
+.counter ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.counter ul li {
+  width: 15%;
+}
+.counter ul li img {
+  height: 120px;
+}
+.counter ul li span {
+  font-family: Lora-Regular;
+  color: var(--main-color);
+  font-size: 18px;
+}
+.counter ul li .number {
+  font-size: 80px;
+  color: var(--dark-color);
+  display: block;
+}
+/* A SHARED EXPERIENCE */
+.chef-menu {
+  display: flex;
+  color: var(--light-color);
+}
+.chef-image {
+  width: 45%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.042), rgb(0, 0, 0.4)),
+    url(../images/catering-chef-menu.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.chef-menu-details {
+  width: 55%;
+  background-color: #0c0c0c;
+  padding: 50px 50px 50px 70px;
+}
+.chef-menu-details h2 {
+  color: var(--light-color);
+  padding: 30px 0;
+}
+.chef-menu-details p {
+  line-height: 34px;
+  font-size: 18px;
+  padding-bottom: 50px;
+}
+.chef-menu-details ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.chef-menu-details ul li {
+  width: 32%;
+}
+.chef-menu .menu-item-images img {
+  width: 70%;
+  border: 10px solid #33363a;
+  border-radius: 50%;
+  transition: var(--default-transition);
+}
+.chef-menu-details ul li h4 {
+  font-family: Lora-Bold;
+  font-size: 24px;
+  line-height: 31px;
+  padding: 10px 0 30px 0;
+}
+.chef-menu .menu-item-images:hover img {
+  transform: scale(1.1);
+}
+/* NEWS & ARTICLES */
+.news {
+  text-align: center;
+  padding: 100px 0;
+}
+.news h2 {
+  padding: 30px;
+}
+.news ul {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+.news ul li {
+  width: 48%;
+}
+.news figure {
+  width: 100%;
+  position: relative;
+  transition: var(--default-transition);
+  overflow: hidden;
+  cursor: pointer;
+}
+.news figure::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  background-color: var(--main-color);
+  transition: var(--default-transition);
+  opacity: 0;
+}
+.news figure i {
+  width: 40px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  z-index: 50;
+  transition: var(--default-transition);
+  color: var(--dark-color);
+  opacity: 0;
+}
+.news figure .fa-link {
+  left: 45%;
+}
+.news figure .fa-magnifying-glass {
+  left: 55%;
+}
+.news figure:hover::after {
+  bottom: 0;
+  opacity: 0.6;
+}
+.news figure:hover .fa-link,
+.news figure:hover .fa-magnifying-glass {
+  opacity: 0.9;
+}
+.news figure img {
+  width: 100%;
+  display: block;
+}
+.news ul li span {
+  font-family: Lora-Regular;
+  display: block;
+  font-size: 16px;
+  padding: 30px 0 15px 0;
+}
+.news ul li span a {
+  color: #0f1317;
+}
+.news ul li h4 {
+  font-size: 30px;
+  font-family: Lora-Bold;
+  color: #0f1317;
+  padding: 20px 0;
+}
+.news ul li .waves {
+  width: 80px;
+}
+.news ul li a:hover {
+  color: var(--main-color);
+}
+.read-more {
+  color: var(--dark-color);
+  padding: 20px 35px;
+  font-size: 18px;
+  border: 1px solid var(--dark-color);
+  font-family: Lora-Bold;
+}
+.read-more:hover {
+  border-color: var(--main-color);
+}
+/* PARTNERS */
+.partners {
+  padding: 100px 0;
+}
+.partners ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.partner1 {
+  width: 160px;
+  height: 161px;
+}
+.partner2 {
+  width: 190px;
+  height: 138px;
+}
+.partner3 {
+  width: 196px;
+  height: 129px;
+}
+.partner4 {
+  width: 155px;
+  height: 156px;
+}
+.partner5 {
+  width: 226px;
+  height: 145px;
+}
+/* SUBSCRIBE FOR OFFERS */
+.subscribe {
+  width: 100%;
+  height: 615px;
+  background-image: url(../images/catering-newsletter-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  color: var(--light-color);
+  padding: 100px;
+}
+.subscribe h2 {
+  color: var(--light-color);
+  padding: 20px 0;
+}
+.subscribe form input {
+  margin: 50px;
+  padding: 20px 100px 20px 20px;
+  font-size: 18px;
+  color: var(--dark-color);
+}
+.subscribe form input:hover {
+  border: 1px solid var(--main-color);
+}
+.subscribe form button {
+  font-family: Lora-Bold;
+  font-size: 18px;
+  background-color: var(--main-color);
+  color: var(--light-color);
+  border: none;
+  padding: 20px 30px;
+}
+.subscribe form button:hover {
+  background-color: transparent;
+  border: 2px solid var(--light-color);
+}
+footer {
+  background-color: #0f1317;
+  color: var(--light-color);
+  padding: 100px 0 50px 0;
+}
+.footer-content ul {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+.footer-content ul li {
+  width: 30%;
+}
+.footer-content ul li img {
+  width: 290px;
+}
+.footer-content ul li h5 {
+  font-size: 24px;
+  padding-bottom: 20px;
+  font-family: Lora-Bold;
+}
+.footer-content ul li p {
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+.footer-content .hours {
+  line-height: 34px;
+}
+.fa-brands {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+.fa-facebook-f,
+.fa-x-twitter,
+.fa-instagram,
+.fa-youtube,
+.fa-whatsapp {
+  background-color: #33363a;
+  color: var(--light-color);
+}
+.fa-brands:hover {
+  background-color: #8bc34a;
+}
+.footer-content .email {
+  font-size: 18px;
+  color: var(--main-color);
+}
+.footer-content .call {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+.footer-content .call-info {
+  padding: 20px 0 0 30px;
+}
+.call .fa-solid {
+  width: 70px;
+  height: 70px;
+  font-size: 25px;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 50%;
+}
+.call .fa-phone-volume {
+  background-color: var(--main-color);
+  color: var(--light-color);
+}
+.footer-content .call-number {
+  font-size: 24px;
+  font-family: Lora-Bold;
+}
+.footer-content .separator {
+  padding-bottom: 30px;
+}
+.footer-content .Copyright {
+  font-size: 16px;
+  text-align: center;
+}
+.footer-content .Copyright a {
+  color: var(--main-color);
+}
+.separator {
+  width: 95%;
+}
+/* RESPONSIVE */
+@media (max-width: 1250px) {
+  /* NAV */
+  nav ul {
+    display: none;
+  }
+  /* HAMBURGER */
+  .hamburger {
+    width: 33%;
+    display: block;
+    text-align: end;
+  }
+  /* HEADER */
+  .header {
+    flex-wrap: wrap;
+  }
+  .hero-details {
+    width: 100%;
+    padding-bottom: 70px;
+  }
+  .hero-image {
+    width: 100%;
+    height: 100vh;
+  }
+  .competitive-advantages {
+    margin-top: 600px;
+  }
+  .buttons {
+    padding: 20px 25px;
+  }
+  /* CATERING SERVICES */
+  .services .services-4-types {
+    flex-wrap: wrap;
+  }
+  .types-details {
+    width: 47%;
+  }
+  .services h2 {
+    padding-bottom: 0px;
+  }
+  .types-details figure img {
+    margin-top: 60px;
+  }
+  .types-details figure:hover::after {
+    bottom: -60px;
+    opacity: 0.6;
+  }
+  /* ABOUT MENU */
+  .about-menu {
+    height: 500px;
+  }
+  .about-menu .view-menu {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .about-menu ul {
+    flex-direction: column;
+  }
+  .about-menu ul img {
+    margin: 0 auto;
+  }
+  .view-menu a {
+    padding: 20px 50px;
+    margin-top: 50px;
+  }
+  .view-menu .display-text {
+    padding: 30px 0 15px 0;
+  }
+  /* WHY AVADA CATERER? */
+  .why-us {
+    flex-direction: column;
+  }
+  .why-us section {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .why-us figure {
+    display: flex;
+    width: 100%;
+    height: 500px;
+  }
+  .why-us figure .image-description {
+    width: 50%;
+    height: 500px;
+    top: 0;
+    left: -10%;
+  }
+  /* A SHARED EXPERIENCE */
+  .chef-menu {
+    flex-direction: column;
+  }
+  .chef-image {
+    width: 100%;
+    height: 100vh;
+  }
+  .chef-menu-details {
+    width: 100%;
+  }
+  .chef-menu .menu-item-images img {
+    width: 50%;
+  }
+  /* NEWS & ARTICLES */
+  .news figure .fa-link {
+    left: 40%;
+  }
+  .news figure .fa-magnifying-glass {
+    left: 55%;
+  }
+  /* PARTNERS */
+  .partners ul li img {
+    width: 80%;
+  }
+  /* SUBSCRIBE FOR OFFERS */
+  .subscribe {
+    width: 100%;
+  }
+  .subscribe p {
+    line-height: 34px;
+  }
+  .subscribe form input {
+    width: 67%;
+  }
+  /* FOOTER */
+  .footer-content ul {
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-content ul li {
+    width: 50%;
+  }
+  .footer-content ul .footer-logo {
+    width: 100%;
+  }
+  .Copyright {
+    line-height: 30px;
+  }
+  .separator {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  /* NAV */
+  nav {
+    flex-wrap: wrap;
+    padding: 10px 30px;
+  }
+  nav > a {
+    width: 50%;
+  }
+  nav .hamburger {
+    width: 50%;
+  }
+  nav .btn {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+  /* HEADER */
+  .hero-details {
+    width: 100%;
+    padding: 70px 0 70px 30px;
+  }
+  .hero-image {
+    width: 100%;
+    height: 50%;
+  }
+  /* COMPETITIVE-ADVANTAGES */
+  .competitive-advantages {
+    margin-top: 400px;
+  }
+  .competitive-advantages ul {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  .competitive-advantages ul li {
+    width: 80%;
+    padding-bottom: 60px;
+  }
+  /* CHEF MESSAGE */
+  .chef-message {
+    flex-direction: column;
+    padding: 70px 0;
+  }
+  .chef-message figure img {
+    width: 100%;
+  }
+  .chef-message section {
+    width: 100%;
+    padding-top: 50px;
+  }
+  /* CATERING SERVICES */
+  .types-details {
+    width: 100%;
+  }
+  /* ABOUT MENU */
+
+  .about-menu {
+    height: 100vh;
+  }
+  .view-menu p {
+    width: 65%;
+    margin: 0 auto;
+    line-height: 30px;
+  }
+  .view-menu .display-text {
+    line-height: 50px;
+  }
+  /* WHY AVADA CATERER? */
+  .why-us figure > img {
+    display: none;
+  }
+  .why-us figure .image-description {
+    width: 100%;
+    /* height: 500px; */
+    top: 0;
+    left: 0;
+  }
+  /* COUNTER */
+  .counter ul {
+    flex-direction: column;
+  }
+  .counter ul li {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  /* A SHARED EXPERIENCE */
+  .chef-menu-details ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .chef-menu-details ul li {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .chef-menu .menu-item-images img {
+    width: 60%;
+  }
+  /* NEWS & ARTICLES */
+  .news ul {
+    flex-direction: column;
+  }
+  .news ul li {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  /* PARTNERS */
+  .partners ul {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .partners ul li {
+    width: 40%;
+  }
+  .partners ul li img {
+    width: 100%;
+  }
+  /* SUBSCRIBE FOR OFFERS */
+  .subscribe {
+    height: 700px;
+    padding: 100px 30px;
+  }
+  .subscribe form input {
+    width: 75%;
+  }
+  /* FOOTER */
+  .footer-content ul {
+    flex-direction: column;
+    text-align: left;
+  }
+  .footer-content ul li {
+    width: 100%;
+    padding: 0;
+  }
+  .footer-content ul li h5 {
+    padding-top: 50px;
+  }
+  .footer-content .call {
+    flex-direction: column;
+    align-items: start;
+  }
+  .footer-content .call-info {
+    padding: 30px 0 0 0;
+  }
+}
