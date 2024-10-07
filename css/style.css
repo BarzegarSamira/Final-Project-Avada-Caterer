@@ -423,6 +423,7 @@ nav > ul > li:first-child i {
   align-items: center;
   position: absolute;
   top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 50;
   transition: var(--default-transition);
   opacity: 0;
@@ -696,6 +697,7 @@ nav > ul > li:first-child i {
   align-items: center;
   position: absolute;
   top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 50;
   transition: var(--default-transition);
   color: var(--dark-color);
@@ -844,7 +846,7 @@ footer {
 .footer-content .hours {
   line-height: 34px;
 }
-.fa-brands {
+.footer-content .fa-brands {
   width: 40px;
   height: 40px;
   font-size: 20px;
@@ -942,15 +944,13 @@ footer {
     width: 47%;
   }
   .services h2 {
-    padding-bottom: 0px;
+    padding-bottom: 20px;
   }
-  .types-details figure img {
-    margin-top: 60px;
+  .types-details a {
+    margin-bottom: 30px;
+    display: inline-flex;
   }
-  .types-details figure:hover::after {
-    bottom: -60px;
-    opacity: 0.6;
-  }
+
   /* ABOUT MENU */
   .about-menu {
     height: 500px;
@@ -1106,7 +1106,6 @@ footer {
     width: 100%;
   }
   /* ABOUT MENU */
-
   .about-menu {
     height: 100vh;
   }
@@ -1124,7 +1123,6 @@ footer {
   }
   .why-us figure .image-description {
     width: 100%;
-    /* height: 500px; */
     top: 0;
     left: 0;
   }
